@@ -27,7 +27,7 @@
 3. Run on local:
    ```
     export PYTHONPATH=/Users/rohit/blendsql:$PYTHONPATH
-    python3 main.py
+    python3 blend.py
    ```
 
 ## WikiTQ Prompts
