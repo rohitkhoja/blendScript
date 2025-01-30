@@ -17,7 +17,7 @@
    pip3 install guidance
    pip3 install azure
    pip3 install azure-identity
-   pip3 install guidance==0.0.64
+   pip3 install guidance
    pip3 install sqlglot==18.1.0
    pip3 install rapidfuzz
    pip3 install diskcache 
