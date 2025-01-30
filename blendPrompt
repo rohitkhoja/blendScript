@@ -1,0 +1,485 @@
+
+Columns: Index(['Round', 'Date', 'Circuit', 'Winning_driver_TA2', 'Winning_vehicle_TA2',
+       'Winning_driver_TA1', 'Winning_vehicle_TA1'],
+      dtype='object')
+Table: <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Round</th>
+      <th>Date</th>
+      <th>Circuit</th>
+      <th>Winning_driver_TA2</th>
+      <th>Winning_vehicle_TA2</th>
+      <th>Winning_driver_TA1</th>
+      <th>Winning_vehicle_TA1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>May 21</td>
+      <td>Sears Point</td>
+      <td>Greg Pickett</td>
+      <td>Chevrolet Corvette</td>
+      <td>Gene Bothello</td>
+      <td>Chevrolet Corvette</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>June 4</td>
+      <td>Westwood</td>
+      <td>Ludwig Heimrath</td>
+      <td>Porsche 935</td>
+      <td>Nick Engels</td>
+      <td>Chevrolet Corvette</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>June 11</td>
+      <td>Portland</td>
+      <td>Tuck Thomas</td>
+      <td>Chevrolet Monza</td>
+      <td>Bob Matkowitch</td>
+      <td>Chevrolet Corvette</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>June 25</td>
+      <td>Mont-Tremblant</td>
+      <td>Monte Sheldon</td>
+      <td>Porsche 935</td>
+      <td>Bob Tullius</td>
+      <td>Jaguar XJS</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>July 8</td>
+      <td>Watkins Glen‡</td>
+      <td>Hal Shaw, Jr.\n Monte Shelton</td>
+      <td>Porsche 935</td>
+      <td>Brian Fuerstenau\n Bob Tullius</td>
+      <td>Jaguar XJS</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>August 13</td>
+      <td>Brainerd</td>
+      <td>Jerry Hansen</td>
+      <td>Chevrolet Monza</td>
+      <td>Bob Tullius</td>
+      <td>Jaguar XJS</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>August 19</td>
+      <td>Mosport</td>
+      <td>Greg Pickett</td>
+      <td>Chevrolet Corvette</td>
+      <td>Bob Tullius</td>
+      <td>Jaguar XJS</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>September 4</td>
+      <td>Road America</td>
+      <td>Greg Pickett</td>
+      <td>Chevrolet Corvette</td>
+      <td>Bob Tullius</td>
+      <td>Jaguar XJS</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>October 8</td>
+      <td>Laguna Seca</td>
+      <td>Greg Pickett</td>
+      <td>Chevrolet Corvette</td>
+      <td>Bob Tullius</td>
+      <td>Jaguar XJS</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>November 5</td>
+      <td>Mexico City</td>
+      <td>Ludwig Heimrath</td>
+      <td>Porsche 935</td>
+      <td>Bob Tullius</td>
+      <td>Jaguar XJS</td>
+    </tr>
+  </tbody>
+</table>
+
+Question: who had more wins: greg pickett or bob tullius?
+
+
+BlendSQL:
+{{\n    LLMQA(\n        'Who had more wins between Greg Pickett and Bob Tullius?',\n        (\n            SELECT winning_driver_TA1, COUNT(*) AS wins\n            FROM w\n            WHERE winning_driver_TA1 IN ('Greg Pickett', 'Bob Tullius')\n            GROUP BY winning_driver_TA1\n        )\n    )\n}}
+
+
+--------
+
+Columns: Index(['Year', 'Title', 'Role_1', 'Notes'], dtype='object')
+Table: <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Title</th>
+      <th>Role_1</th>
+      <th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1991</td>
+      <td>Fleshn Blood</td>
+      <td>Penelope</td>
+      <td>1 episode</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1992</td>
+      <td>True Colors</td>
+      <td>Lorae</td>
+      <td>1 episode</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1994</td>
+      <td>The All-New Mickey Mouse (MMC)</td>
+      <td>Herself</td>
+      <td>1 episode</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1994–1999</td>
+      <td>Sister, Sister</td>
+      <td>Tamera Campbell</td>
+      <td>119 episodes</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1995</td>
+      <td>Are You Afraid of the Dark?</td>
+      <td>Evil Chameleon</td>
+      <td>1 episode</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>1995–1996</td>
+      <td>The Adventures of Hyperman</td>
+      <td>Emma C. Squared</td>
+      <td>8 episodes</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>1996</td>
+      <td>All That</td>
+      <td>Herself</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>1997</td>
+      <td>Smart Guy</td>
+      <td>Roxanne</td>
+      <td>1 episode</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>1998</td>
+      <td>Blues Clues</td>
+      <td>Herself</td>
+      <td>1 episode</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>1999</td>
+      <td>Detention</td>
+      <td>Orangejella LaBelle</td>
+      <td>13 episodes</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2000</td>
+      <td>How I Loved a Macho Boy</td>
+      <td>Jamal Santos</td>
+      <td>3 episodes</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2004–2006</td>
+      <td>Strong Medicine</td>
+      <td>Dr. Kayla Thorton</td>
+      <td>37 episodes</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2006–2007</td>
+      <td>Family Guy</td>
+      <td>Esther</td>
+      <td>Voice\n3 episodes</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2009</td>
+      <td>Roommates</td>
+      <td>Hope</td>
+      <td>13 episodes</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2009</td>
+      <td>The Super Hero Squad Show</td>
+      <td>Misty Knight</td>
+      <td>1 episode</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2011</td>
+      <td>Things We Do for Love</td>
+      <td>Lourdes</td>
+      <td>5 episodes</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2011</td>
+      <td>Access Hollywood Live</td>
+      <td>Herself</td>
+      <td>Co-host</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2011</td>
+      <td>CHRISJayify</td>
+      <td>Herself</td>
+      <td>Episode: \Drugs Are Bad\""</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2011–2013</td>
+      <td>Tia &amp; Tamera</td>
+      <td>Herself</td>
+      <td>Executive producer</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2012</td>
+      <td>Christmas Angel</td>
+      <td>Daphney</td>
+      <td>None</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>2013</td>
+      <td>The Real</td>
+      <td>Herself</td>
+      <td>Host</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>2014</td>
+      <td>Melissa and Joey</td>
+      <td>Gillian</td>
+      <td>Season 3 Episode 24 'To Tell the Truth'</td>
+    </tr>
+  </tbody>
+</table>
+
+Question: in how many tv shows tamera mowry appeared in more than 1 episode?
+
+BlendSQL:
+SELECT COUNT(*) FROM w WHERE {{\n    LLMMap('Did Tamera Mowry appear in more than 1 episode?', 'w::Notes')\n}} = TRUE
+
+
+---------
+
+Columns: Index(['Place', 'Player', 'Country', 'Score', 'To_par'], dtype='object')
+Table: <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Place</th>
+      <th>Player</th>
+      <th>Country</th>
+      <th>Score</th>
+      <th>To_par</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Retief Goosen</td>
+      <td>South Africa</td>
+      <td>68-70-69=207</td>
+      <td>–3</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>T2</td>
+      <td>Olin Browne</td>
+      <td>United States</td>
+      <td>67-71-72=210</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>T2</td>
+      <td>Jason Gore</td>
+      <td>United States</td>
+      <td>71-67-72=210</td>
+      <td>E</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>T4</td>
+      <td>Michael Campbell</td>
+      <td>New Zealand</td>
+      <td>71-69-71=211</td>
+      <td>+1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>T4</td>
+      <td>Mark Hensby</td>
+      <td>Australia</td>
+      <td>71-68-72=211</td>
+      <td>+1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>David Toms</td>
+      <td>United States</td>
+      <td>70-72-70=212</td>
+      <td>+2</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>T7</td>
+      <td>K. J. Choi</td>
+      <td>South Korea</td>
+      <td>69-70-74=213</td>
+      <td>+3</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>T7</td>
+      <td>Peter Hedblom</td>
+      <td>Sweden</td>
+      <td>77-66-70=213</td>
+      <td>+3</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>T7</td>
+      <td>Lee Westwood</td>
+      <td>England</td>
+      <td>68-72-73=213</td>
+      <td>+3</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>T7</td>
+      <td>Tiger Woods</td>
+      <td>United States</td>
+      <td>70-71-72=213</td>
+      <td>+3</td>
+    </tr>
+  </tbody>
+</table>
+Question: how many strokes did david toms make?
+
+BlendSQL:
+SELECT {{LLMMap('Number of strokes made by David Toms?', 'w::Score')}} FROM w WHERE Player = 'David Toms'
+
+
+--------
+
+
+Columns: Index(['Rank_1', 'Name', 'Nationality', 'Time'], dtype='object')
+Table: <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Rank_1</th>
+      <th>Name</th>
+      <th>Nationality</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>NaN</td>
+      <td>Joanne Malar</td>
+      <td>Canada</td>
+      <td>4:43.64</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>NaN</td>
+      <td>Alison Fealey</td>
+      <td>United States</td>
+      <td>4:48.31</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>NaN</td>
+      <td>Jenny Kurth</td>
+      <td>United States</td>
+      <td>4:57.24</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4.0</td>
+      <td>Sonia Fonseca</td>
+      <td>Puerto Rico</td>
+      <td>5:03.15</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5.0</td>
+      <td>Fabíola Molina</td>
+      <td>Brazil</td>
+      <td>5:03.43</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6.0</td>
+      <td>Isabel Rojas</td>
+      <td>Colombia</td>
+      <td>5:11.58</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7.0</td>
+      <td>Carolyn Adel</td>
+      <td>Suriname</td>
+      <td>5:13.24</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8.0</td>
+      <td>Edith Arraspide</td>
+      <td>Argentina</td>
+      <td>5:13.95</td>
+    </tr>
+  </tbody>
+</table>
+Question: how many medals did the usa win in the finals?
+
+BlendSQL:
+{{\n    LLMQA(\n        'How many medals did the USA win in the finals?',\n        (\n            SELECT COUNT(*) AS 'Medals' FROM w\n            WHERE Nationality = 'United States'\n        )\n    )\n}}
