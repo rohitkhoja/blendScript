@@ -59,7 +59,7 @@ def generate_blendsql_query(table, question):
 
     
     """
-    with open('blendPrompt', 'r') as file:
+    with open('blendPrompt.txt', 'r') as file:
         blendPrompt = file.read()
     prompt += "\n\n" + blendPrompt
 
