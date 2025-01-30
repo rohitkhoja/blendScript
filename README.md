@@ -9,7 +9,6 @@
 
 2. Install dependencies:
    ```
-   python3 llm-few-shot-example.py
    pip3 install typeguard
    pip3 install colorama
    pip3 install tabulate
