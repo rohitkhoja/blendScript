@@ -5,6 +5,7 @@
 1. Clone the repository:
    ```
    git clone https://github.com/parkervg/blendsql.git
+   cd blendsql
    ```
 
 2. Install dependencies:
@@ -25,6 +26,7 @@
 3. clone this repository:
    ```
    https://github.com/rohitkhoja/blendScript.git
+   cd blendScript
    ```
 5. Run on local:
    ```
@@ -32,9 +34,6 @@
     python3 main.py
     # call function execute_blend(table, question, table_name, table_id) from main.py
    ```
-
-## WikiTQ Dataset few shot examples
-use file blendPrompt.txt
 
 ## Citation
    ```
