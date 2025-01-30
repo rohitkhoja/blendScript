@@ -23,16 +23,19 @@
    pip3 install diskcache 
    pip install skrub
    ```
-
-3. Run on local:
+3. clone this repository:
+   ```
+   https://github.com/rohitkhoja/blendScript.git
+   ```
+5. Run on local:
    ```
     export PYTHONPATH=/your/path/to/repo/blendsql:$PYTHONPATH
     python3 main.py
     # call function execute_blend(table, question, table_name, table_id) from main.py
    ```
 
-## WikiTQ Prompts
-For more information on how to use the application, refer to the individual component files and the CI/CD configuration file.
+## WikiTQ Dataset few shot examples
+use file blendPrompt.txt
 
 ## Citation
    ```
