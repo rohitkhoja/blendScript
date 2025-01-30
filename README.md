@@ -26,7 +26,7 @@
 
 3. Run on local:
    ```
-    export PYTHONPATH=/Users/rohit/blendsql:$PYTHONPATH
+    export PYTHONPATH=/your/path/to/repo/blendsql:$PYTHONPATH
     python3 main.py
     # call function execute_blend(table, question, table_name, table_id) from main.py
    ```
