@@ -59,9 +59,9 @@ def generate_blendsql_query(table, question):
 
     
     """
-    with open('/Users/rohit/tab-query-ai/blenPrompt', 'r') as file:
-        blenPrompt = file.read()
-    prompt += "\n\n" + blenPrompt
+    with open('blendPrompt', 'r') as file:
+        blendPrompt = file.read()
+    prompt += "\n\n" + blendPrompt
 
     prompt += f"""
       Columns: {table.columns}
@@ -151,5 +151,5 @@ def execute_blend(table, question, table_name, table_id):
         error_message = str(e)
         print(f"An error occurred: {error_message}")
         # Return default values in case of failure
-        return "error occured while runngin Blend", formatted_query, error_message
+        return "error occured while trying to execute blend query", formatted_query, error_message
 
