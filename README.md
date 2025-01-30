@@ -27,7 +27,8 @@
 3. Run on local:
    ```
     export PYTHONPATH=/Users/rohit/blendsql:$PYTHONPATH
-    python3 blend.py
+    python3 main.py
+    # call function execute_blend(table, question, table_name, table_id) from main.py.
    ```
 
 ## WikiTQ Prompts
